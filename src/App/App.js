@@ -1,9 +1,9 @@
-import AppRoutes from "./AppRoutes";
+import { AppRoutes } from "./AppRoutes";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">working</header>
+      <AppRoutes />
     </div>
   );
 }
