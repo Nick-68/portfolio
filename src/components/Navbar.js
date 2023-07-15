@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link, useLocation } from "react-router-dom";
+import { ThemeChange } from "./ThemeChange";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ export const Navbar = () => {
   const location = useLocation();
 
   return (
-    <div className="navbar-container relative">
+    <div className="navbar-container relative dark:bg-gray-800">
       <Transition
         show={isOpen}
         enter="transition-transform duration-300 ease-out"
@@ -24,8 +25,8 @@ export const Navbar = () => {
       >
         <div className="sidebar absolute top-0 left-0 w-20 md:w-32 h-screen dark:bg-gray-800 dark:text-white z-10 shadow-2xl md:text-2xl flex flex-col items-center ">
           <h2 className="my-2 text-6xl md:text-9xl text-blue-400">N</h2>
-          <h2 className="text-blue-400 mb-10">Nick</h2>
-
+          <h2 className="text-blue-400 ">Nick</h2>
+          <ThemeChange />
           <Link
             to="/Home"
             className={`text-center mb-10 w-16 md:w-24 shadow-slate-500 rounded-2xl py-1 md:pt-4 md:mt-10 ${
@@ -88,13 +89,6 @@ export const Navbar = () => {
           <i className="fa-solid fa-square-xmark fa-2xl text-blue-400"></i>
         ) : (
           <i className="fa-solid fa-bars fa-2xl text-blue-400"></i>
-        )}
-      </button>
-      <button className="absolute top-0 right-0 mt-4 mr-4">
-        {isOpen ? (
-          <i class="fa-regular fa-sun"></i>
-        ) : (
-          <i class="fa-regular fa-moon"></i>
         )}
       </button>
     </div>

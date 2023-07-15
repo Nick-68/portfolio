@@ -5,6 +5,7 @@ import { Profile } from "../components/Profile";
 import { Navbar } from "../components/Navbar";
 import { About } from "../components/About";
 import { Projects } from "../components/Projects";
+
 export const AppRoutes = () => {
   return (
     <div className="flex w-screen h-screen">
