@@ -13,7 +13,7 @@ export const Navbar = () => {
   const location = useLocation();
 
   return (
-    <div className="navbar-container relative dark:bg-gray-800">
+    <div className="navbar-container relative bg-slate-200 dark:bg-gray-800">
       <Transition
         show={isOpen}
         enter="transition-transform duration-300 ease-out"
@@ -23,7 +23,7 @@ export const Navbar = () => {
         leaveFrom="translate-x-0"
         leaveTo="-translate-x-full"
       >
-        <div className="sidebar absolute top-0 left-0 w-20 md:w-32 h-screen dark:bg-gray-800 dark:text-white z-10 shadow-2xl md:text-2xl flex flex-col items-center ">
+        <div className="sidebar absolute top-0 left-0 w-20 md:w-32 h-screen bg-slate-200 dark:bg-gray-800 dark:text-white  shadow-2xl md:text-2xl flex flex-col items-center">
           <h2 className="my-2 text-6xl md:text-9xl text-blue-400">N</h2>
           <h2 className="text-blue-400 ">Nick</h2>
           <ThemeChange />
